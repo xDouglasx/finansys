@@ -10,7 +10,6 @@ export class InMemoryDatabase implements InMemoryDbService{
             {  id:4, name: "Salario", description: "Recebimento de salario" },
             {  id:5, name: "Freelas", description: "Trabalhos como freelancer" },
         ];
-
     return { categories }    
     }
 }
