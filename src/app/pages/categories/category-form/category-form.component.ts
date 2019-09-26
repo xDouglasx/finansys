@@ -19,7 +19,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   categoryForm: FormGroup;
   pageTitle: string;
   serverErrorMessages: string[] =null;
-  submttingForm: boolean = false;
+  submittingForm: boolean = false;
   category: Category = new Category();
 
   constructor(
@@ -40,7 +40,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   submitForm(){
-    this.submttingForm = true;
+    this.submittingForm = true;
     if(this.currentAction == 'new')
        this.createCategory(); 
     else
@@ -115,7 +115,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
 
   private actionsForError(error){
     toastr.error("Ocorreu um erro ao processar a sua solicitacao");
-    this.submttingForm = false;
+    this.submittingForm = false;
     if(error.status === 422)
        this.serverErrorMessages = JSON.parse(error._body).errors;
     else
