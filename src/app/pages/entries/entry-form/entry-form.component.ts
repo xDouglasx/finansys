@@ -49,9 +49,7 @@ export class EntryFormComponent extends BaseResourceFormComponent<Entry> impleme
     }
 
   ngOnInit() {
-    this.setCurrentAction();
-    this.buildResourceForm();
-    this.loadResource();
+    super.ngOnInit();
     this.loadCategories();    
   }
 
